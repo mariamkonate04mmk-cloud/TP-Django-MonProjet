@@ -1,0 +1,54 @@
+{% extends 'monapp/base.html' %}
+
+{% block title %}À propos - MonProjet{% endblock %}
+
+{% block content %}
+
+<div class="about-container">
+    <h1 class="about-title">À propos de nous</h1>
+
+    <div class="about-intro">
+        <p>Ce site a été créé avec Django pour un devoir pratique.</p>
+        <p>Il inclut plusieurs pages avec héritage de templates.</p>
+    </div>
+
+    <div class="about-image-section">
+        <div class="image-container">
+            {% load static %}
+            <img src="{% static 'monapp/images/django-logo.png' %}" alt="Logo Django" class="django-logo">
+            <p class="image-caption">Logo Django utilisé comme exemple</p>
+        </div>
+    </div>
+
+    <div class="mission-section">
+        <h2 class="mission-title">Notre mission</h2>
+        <p class="mission-text">Apprendre Django étape par étape.</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>✅ Configuration</h3>
+                <p>Apprendre à configurer un projet Django de A à Z</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 Templates</h3>
+                <p>Maîtriser l'héritage de templates et les fichiers statiques</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚀 Déploiement</h3>
+                <p>Préparer le projet pour un déploiement réel</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-tech">
+        <h3>Technologies utilisées :</h3>
+        <ul class="tech-list">
+            <li><strong>Django 4.2+</strong> - Framework web Python</li>
+            <li><strong>HTML5 & CSS3</strong> - Structure et style</li>
+            <li><strong>JavaScript</strong> - Interactivité</li>
+            <li><strong>SQLite</strong> - Base de données</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
